@@ -3,12 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure
+}
 .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 2.5em;
+    margin-top: 100px;
 }
 .day{
     display: flex;
@@ -34,6 +41,7 @@
 }
 .print h3{
     font-style: italic;
+    margin: 100px 50px;
 }
 button{
     width: 80px;
@@ -44,6 +52,9 @@ button{
     cursor: pointer;
     margin-top: 30px;
     font-size: 16px;
+    position: absolute;
+    top: 80%;
+    left: 100px;
     color: white;
    background-color: blue;
 }
@@ -59,10 +70,25 @@ button{
 @media screen and (max-width: 500px) {
     .date{
         position: absolute;
-        top: 130%;
+        top: 90%;
         left: 350px;
         font-size: 20px;
         font-weight: 300;
+    }
+    button{
+        width: 80px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 16px;
+        position: absolute;
+        top: 80%;
+        left: 30px;
+        color: white;
+       background-color: blue;
     }
 }
 @media screen and (max-width: 375px) {
@@ -72,8 +98,8 @@ button{
     }
     .date{
         position: absolute;
-        top: 130%;
-        left: 250px;
+        top: 70%;
+        left: 230px;
         font-size: 18px;
         font-weight: 300;
     }
@@ -81,5 +107,20 @@ button{
         font-style: italic;
         font-size: 18px;
         width: 100%;
+    }
+    button{
+        width: 80px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 16px;
+        position: absolute;
+        top: 60%;
+        left: 30px;
+        color: white;
+       background-color: blue;
     }
 }
