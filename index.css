@@ -51,7 +51,7 @@ button{
     .date{
         position: absolute;
         top: 150%;
-        left: 350px;
+        left: 400px;
         font-size: 20px;
         font-weight: 300;
     }
@@ -72,13 +72,14 @@ button{
     }
     .date{
         position: absolute;
-        top: 170%;
-        left: 280px;
+        top: 200%;
+        left: 250px;
         font-size: 20px;
         font-weight: 300;
     }
     .print h3{
         font-style: italic;
-        font-size: 16px;
+        font-size: 13px;
+        width: 100%;
     }
 }
