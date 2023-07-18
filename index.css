@@ -71,9 +71,9 @@ button{
         font-weight: 800;
     }
     .date{
-        position: absolute;
-        top: 200%;
-        left: 250px;
+        position: relative;
+        bottom: 10%;
+        left: 200px;
         font-size: 20px;
         font-weight: 300;
     }
