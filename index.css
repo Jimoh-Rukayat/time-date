@@ -59,27 +59,27 @@ button{
 @media screen and (max-width: 500px) {
     .date{
         position: absolute;
-        top: 120%;
+        top: 130%;
         left: 350px;
         font-size: 20px;
         font-weight: 300;
     }
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 375px) {
     .time{
         font-size: 20px;
         font-weight: 800;
     }
     .date{
-        position: relative;
-        bottom: 10%;
-        left: 200px;
-        font-size: 20px;
+        position: absolute;
+        top: 130%;
+        left: 250px;
+        font-size: 18px;
         font-weight: 300;
     }
     .print h3{
         font-style: italic;
-        font-size: 13px;
+        font-size: 18px;
         width: 100%;
     }
 }
