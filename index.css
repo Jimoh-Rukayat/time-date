@@ -53,7 +53,7 @@ button{
     margin-top: 30px;
     font-size: 16px;
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 100px;
     color: white;
    background-color: blue;
@@ -85,7 +85,7 @@ button{
         margin-top: 30px;
         font-size: 16px;
         position: absolute;
-        top: 80%;
+        top: 85%;
         left: 30px;
         color: white;
        background-color: blue;
@@ -98,8 +98,8 @@ button{
     }
     .date{
         position: absolute;
-        top: 65%;
-        left: 270px;
+        top: 90%;
+        left: 250px;
         font-size: 18px;
         font-weight: 300;
     }
@@ -118,7 +118,7 @@ button{
         margin-top: 30px;
         font-size: 16px;
         position: absolute;
-        top: 60%;
+        top: 85%;
         left: 30px;
         color: white;
        background-color: blue;
