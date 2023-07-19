@@ -66,6 +66,21 @@ button{
         font-size: 20px;
         font-weight: 300;
     }
+    button{
+        width: 80px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 16px;
+        position: absolute;
+        top: 145%;
+        left: 30px;
+        color: white;
+       background-color: blue;
+    }
 }
 @media screen and (max-width: 500px) {
     .date{
