@@ -32,11 +32,13 @@ function leadingZero(time){
 
 let currentDay = new Date();
 let date= currentDay.getDate()
-let month= currentDay.getMonth() 
+let month= currentDay.getMonth() + 1
+month = month < 10 ? '0' + month: month;
 let monthList= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 let year= currentDay.getFullYear()
 
-document.querySelector('.date').innerHTML= date + "/" + (month+1) + " /" + year
+document.querySelector('.date').innerHTML= (month) + "/" + date  + " /" + year
+
 
 let printContent= function(){
     window.print();
