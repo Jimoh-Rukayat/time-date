@@ -1,46 +1,45 @@
-let currentDay = new Date();
-let day = currentDay.getDay();
-let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let one = document.getElementsByClassName('day');
+let two = document.getElementsByClassName('time')
+let three = document.getElementsByClassName('date')
 
-document.querySelector('.day').innerHTML = "Today is :" + " " + dayList[day] + ".";
 
-let hour = currentDay.getHours();
-let minutes =currentDay.getMinutes();
-let seconds = currentDay.getSeconds();
 
+function dateAndTime(){
+    let currentDay = new Date();
+    let day = currentDay.getDay();
+    let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let hour = currentDay.getHours();
 let greenwichMeridian = (hour >= 12) ? " PM" : " AM";
-hour = (hour >= 12) ? hour - 12 : hour;
-if (hour === 0 && greenwichMeridian === " PM"){
-    if (minutes === 0 && seconds === 0){
-        hour = 12;
-        greenwichMeridian = "Noon"
-    }
-    else{
-        hour = 12;
-        greenwichMeridian= " PM"
-    }
-}
-if (hour === 0 && prepand ===" AM"){
-    if(minutes === 0 && seconds === 0){
-        hour = 12;
-        greenwichMeridian = "Midnight"
-    }
-    else{
-        hour= 12;
-        greenwichMeridian = " AM"
-    }
-}
+hour = hour % 12;
+hour = hour ? hour : 12;
+let minutes =currentDay.getMinutes();
+minutes = minutes < 10 ? '0' + minutes: minutes;
+let seconds = currentDay.getSeconds();
+function leadingZero(time){
+     return time.toString().padStart(2, '0');
+ }
+ let currentTime = leadingZero(hour) + " " + greenwichMeridian + ":" + leadingZero(minutes) + ":" + leadingZero(seconds);
+ let a= 'Today is:' + " " + dayList[day];
+ let b= 'Current Time:' + currentTime;
 
-document.querySelector('.time').innerHTML = "Curent Time:" + " " + hour + greenwichMeridian + " :" + " " + minutes + ":" + " " + seconds;
+ let one = document.getElementsByClassName('day')[0];
+  let two = document.getElementsByClassName('time')[0];
 
+ one.innerHTML= a
+ two.innerHTML= b;
+
+}setInterval(dateAndTime, 1000);
+
+let currentDay = new Date();
 let date= currentDay.getDate()
 let month= currentDay.getMonth() 
 let monthList= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 let year= currentDay.getFullYear()
 
-document.querySelector('.date').innerHTML= date + "/" + (month+1) + "/" + year
+document.querySelector('.date').innerHTML= date + "/" + (month+1) + " /" + year
 
 let printContent= function(){
     window.print();
 }
+
 
